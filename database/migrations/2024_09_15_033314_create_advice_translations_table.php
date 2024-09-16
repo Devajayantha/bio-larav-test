@@ -18,10 +18,10 @@ return new class extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->string('locale', 10)->index();
-            $table->text('name');
-            $table->text('information');
-            $table->text('actual_tip');
-            $table->text('tip_example');
+            $table->text('name')->nullable();
+            $table->text('information')->nullable();
+            $table->text('actual_tip')->nullable();
+            $table->text('tip_example')->nullable();
         });
     }
 
